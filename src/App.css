@@ -1,0 +1,42 @@
+.SearchPage {
+  border: 2px solid #6269a8;
+  border-radius: 10px;
+  background: white;
+}
+.searchBox {
+  background: white;
+}
+.App {
+  background: #6269a8;
+  min-height: 100vh;
+}
+.SideBar .color-filter,
+.SideBar .shape-filter,
+.SideBar .size-filter {
+  display: block;
+}
+.SideBar .filterHeading {
+  font-size: 20px;
+  color: #6269a8;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .SideBar {
+    border-right: 2px solid #6269a8;
+  }
+  .SideBar .color-filter,
+  .SideBar .shape-filter,
+  .SideBar .size-filter {
+    display: block;
+    flex-direction: column;
+  }
+}
+.FilteredResults .result {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.FilteredResults .planet-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6269a8;
+}
