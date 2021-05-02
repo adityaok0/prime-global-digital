@@ -1,7 +1,7 @@
 import SearchBar from "material-ui-search-bar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchTextAction, cancelSearchAction } from "./actions/actions";
 import { MainArea } from "./MainArea";
 export function SearchPage() {
@@ -12,6 +12,12 @@ export function SearchPage() {
   const cancelSearch = () => {
     dispatch(cancelSearchAction());
   };
+  const searchQuery = useSelector(
+    (state) => state.SearchDataReducer.searchQuery
+  );
+  useEffect(() => {
+    setSearchText(searchQuery.q);
+  }, []);
   const [searchText, setSearchText] = useState("");
   return (
     <Container className="SearchPage">
