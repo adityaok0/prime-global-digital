@@ -1,30 +1,32 @@
-import { TextField } from "@material-ui/core";
-import React from "react";
+import SearchBar from "material-ui-search-bar";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import Autocomplete from "@material-ui/lab/Autocomplete";
+import { useDispatch } from "react-redux";
+import { searchTextAction, cancelSearchAction } from "./actions/actions";
 import { MainArea } from "./MainArea";
 export function SearchPage() {
+  const dispatch = useDispatch();
+  const search = () => {
+    dispatch(searchTextAction(searchText));
+  };
+  const cancelSearch = () => {
+    dispatch(cancelSearchAction());
+  };
+  const [searchText, setSearchText] = useState("");
   return (
     <Container className="SearchPage">
       <Row className="justify-content-center pt-3 pb-5">
         <Col lg={6}>
-          <Autocomplete
-            freeSolo
-            id="free-solo-2-demo"
-            disableClearable
-            options={["123", "234", "465", "1234", "5674", "23324"].map(
-              (option) => option
-            )}
-            renderInput={(params) => (
-              <TextField
-                className="searchBox"
-                {...params}
-                label="Search input"
-                margin="normal"
-                variant="outlined"
-                InputProps={{ ...params.InputProps, type: "search" }}
-              />
-            )}
+          <SearchBar
+            value={searchText}
+            onChange={(newValue) => setSearchText(newValue)}
+            onRequestSearch={search}
+            onCancelSearch={async () => {
+              await setSearchText("");
+              cancelSearch();
+            }}
+            placeholder="Search"
+            autoFocus
           />
         </Col>
       </Row>
