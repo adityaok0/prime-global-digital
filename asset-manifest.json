@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/prime-global-digital/static/css/main.debe42fd.chunk.css",
+    "main.js": "/prime-global-digital/static/js/main.0c74bef5.chunk.js",
+    "main.js.map": "/prime-global-digital/static/js/main.0c74bef5.chunk.js.map",
+    "runtime-main.js": "/prime-global-digital/static/js/runtime-main.612a9fa3.js",
+    "runtime-main.js.map": "/prime-global-digital/static/js/runtime-main.612a9fa3.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/prime-global-digital/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.1a27d621.chunk.js": "/prime-global-digital/static/js/2.1a27d621.chunk.js",
+    "static/js/2.1a27d621.chunk.js.map": "/prime-global-digital/static/js/2.1a27d621.chunk.js.map",
+    "static/js/3.f1c26d44.chunk.js": "/prime-global-digital/static/js/3.f1c26d44.chunk.js",
+    "static/js/3.f1c26d44.chunk.js.map": "/prime-global-digital/static/js/3.f1c26d44.chunk.js.map",
+    "index.html": "/prime-global-digital/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/prime-global-digital/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.debe42fd.chunk.css.map": "/prime-global-digital/static/css/main.debe42fd.chunk.css.map",
+    "static/js/2.1a27d621.chunk.js.LICENSE.txt": "/prime-global-digital/static/js/2.1a27d621.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.612a9fa3.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.1a27d621.chunk.js",
+    "static/css/main.debe42fd.chunk.css",
+    "static/js/main.0c74bef5.chunk.js"
+  ]
+}
