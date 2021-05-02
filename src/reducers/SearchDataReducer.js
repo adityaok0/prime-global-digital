@@ -14,7 +14,7 @@ let defaultState = {
           color: [],
           shape: [],
           size: [],
-          q: [],
+          q: "",
         }
       : data,
 };

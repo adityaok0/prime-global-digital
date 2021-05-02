@@ -27,8 +27,8 @@ export function SearchPage() {
             value={searchText}
             onChange={(newValue) => setSearchText(newValue)}
             onRequestSearch={search}
-            onCancelSearch={async () => {
-              await setSearchText("");
+            onCancelSearch={() => {
+              setSearchText("");
               cancelSearch();
             }}
             placeholder="Search"

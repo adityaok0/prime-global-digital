@@ -1,7 +1,7 @@
 import axios from "axios";
 import qs from "qs";
 
-let url = "http://localhost:3000/";
+let url = "https://my-json-server.typicode.com/adityaok0/mock-json-server/";
 export function getFilterDetails() {
   return function (dispatch) {
     return new Promise((resolve, reject) => {
