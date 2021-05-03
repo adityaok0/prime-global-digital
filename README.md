@@ -15,7 +15,7 @@ This will install all the dependencies required to run this app.
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-This project has network calls which have been hosted using mock-json-server, so that there is no separate need to set up a server.
+This project has network calls which have been hosted using mock-json-server at this url [https://my-json-server.typicode.com/adityaok0/mock-json-server](https://my-json-server.typicode.com/adityaok0/mock-json-server), so that there is no separate need to set up a server.
 
 This project uses a number of dependencies.
 Namely,
