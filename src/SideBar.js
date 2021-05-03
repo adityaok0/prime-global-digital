@@ -33,7 +33,6 @@ export function SideBar() {
 
       setChecks(checksTemp);
     });
-    // }
   }, [dispatch, searchQuery.shape, searchQuery.color, searchQuery.size]);
   const handleChange = (type, index) => {
     let temp = { ...checks };

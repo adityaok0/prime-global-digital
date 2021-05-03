@@ -43,21 +43,7 @@ export function setFilters(type, index) {
         searchQuery: searchQuery,
       },
     });
-    axios
-      .get(url + "planets", {
-        params: getState().SearchDataReducer.searchQuery,
-        paramsSerializer: (params) => {
-          return qs.stringify(params, { indices: false });
-        },
-      })
-      .then((res) => {
-        dispatch({
-          type: "SET_FILTERED_RESULTS",
-          payload: {
-            data: res.data,
-          },
-        });
-      });
+    getFilteredData(getState().SearchDataReducer.searchQuery, dispatch);
   };
 }
 export function searchTextAction(text) {
@@ -98,28 +84,19 @@ export function cancelSearchAction() {
         searchQuery: searchQuery,
       },
     });
-    axios
-      .get(url + "planets", {
-        params: getState().SearchDataReducer.searchQuery,
-        paramsSerializer: (params) => {
-          return qs.stringify(params, { indices: false });
-        },
-      })
-      .then((res) => {
-        dispatch({
-          type: "SET_FILTERED_RESULTS",
-          payload: {
-            data: res.data,
-          },
-        });
-      });
+    getFilteredData(getState().SearchDataReducer.searchQuery, dispatch);
   };
 }
 export function initialDataLoad() {
   return function (dispatch, getState) {
+    getFilteredData(getState().SearchDataReducer.searchQuery, dispatch);
+  };
+}
+const getFilteredData = (searchQuery, dispatch) => {
+  new Promise((resolve, reject) => {
     axios
       .get(url + "planets", {
-        params: getState().SearchDataReducer.searchQuery,
+        params: searchQuery,
         paramsSerializer: (params) => {
           return qs.stringify(params, { indices: false });
         },
@@ -132,5 +109,5 @@ export function initialDataLoad() {
           },
         });
       });
-  };
-}
+  });
+};
