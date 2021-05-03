@@ -11,7 +11,7 @@ export function FilteredResults() {
   );
   useEffect(() => {
     dispatch(initialDataLoad());
-  }, []);
+  }, [dispatch]);
   if (searchResult === null) {
     return <CircularIndeterminate />;
   }

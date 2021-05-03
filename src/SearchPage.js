@@ -17,7 +17,7 @@ export function SearchPage() {
   );
   useEffect(() => {
     setSearchText(searchQuery.q);
-  }, []);
+  }, [searchQuery.q]);
   const [searchText, setSearchText] = useState("");
   return (
     <Container className="SearchPage">
