@@ -32,13 +32,10 @@ export function setFilters(type, index) {
       searchQuery[type].push(
         getState().SearchDataReducer.filterData[type][index].id
       );
-      console.log(searchQuery);
-      // });
     } else {
       searchQuery[type] = searchQuery[type].filter(
         (x) => x !== getState().SearchDataReducer.filterData[type][index].id
       );
-      console.log(searchQuery);
     }
     dispatch({
       type: "SET_PARAMS",

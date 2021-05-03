@@ -1,6 +1,6 @@
 import { Checkbox, FormControlLabel, withStyles } from "@material-ui/core";
 import { useEffect, useState } from "react";
-import { Col, Row, Spinner } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getFilterDetails, setFilters } from "./actions/actions";
 import CircularIndeterminate from "./CircularIndeterminate";
@@ -13,8 +13,6 @@ export function SideBar() {
   const dispatch = useDispatch();
   const [checks, setChecks] = useState(null);
   useEffect(() => {
-    // getFilterDetails();
-    // function getFilterDetails() {
     let checksTemp = { shape: [], color: [], size: [] };
     dispatch(getFilterDetails()).then((res) => {
       res[1].data.forEach((shape) => {
